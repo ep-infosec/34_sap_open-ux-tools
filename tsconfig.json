@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": ["es6", "dom", "dom.iterable"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noEmit": false,
+        "sourceMap": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "target": "ES6",
+        "skipLibCheck": true,
+        "resolveJsonModule": true
+    }
+}

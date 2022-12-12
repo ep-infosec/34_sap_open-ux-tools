@@ -1,0 +1,540 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomAction generateCustomAction Test 'position' property. Create with anchor 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "position": Object {
+                        "anchor": "Dummy",
+                        "placement": "Before",
+                      },
+                      "press": "my.test.App.ext.ExistingHandler.onCustomAction",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction Test 'position' property. Create without anchor 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "position": Object {
+                        "placement": "Before",
+                      },
+                      "press": "my.test.App.ext.ExistingHandler.onCustomAction",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction Test 'position' property. Create without position 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "my.test.App.ext.ExistingHandler.onCustomAction",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction Test property "eventHandler" "eventHandler" is "object" - create new file with custom file and function names 1`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        DummyOnAction: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction Test property "eventHandler" "eventHandler" is "object" - create new file with custom function name 1`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        DummyOnAction: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction Test property "eventHandler" "eventHandler" is empty "object" - create new file with default function name 1`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        onPress: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction Test property "eventHandler" "eventHandler" is object. Append new function to existing js file with absolute position 1`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        onPress: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        },
+        onHandleSecondAction: function() {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction Test property "eventHandler" "eventHandler" is object. Append new function to existing js file with position as object 1`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        onPress: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        },
+        onHandleSecondAction: function() {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction minimal settings (no eventhandler) 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction specific control as target 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "controlConfiguration": Object {
+                "TestItems/@com.sap.vocabularies.UI.v1.LineItem#MyQualifier": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction specific target folder, event handler as boolean 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "my.test.App.ext.MyCustomAction.onPress",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction specific target folder, event handler as boolean 2`] = `
+"sap.ui.define([
+    \\"sap/m/MessageToast\\"
+], function(MessageToast) {
+    'use strict';
+
+    return {
+        onPress: function(oEvent) {
+            MessageToast.show(\\"Custom handler invoked.\\");
+        }
+    };
+});
+"
+`;
+
+exports[`CustomAction generateCustomAction with existing event handler as string 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "my.test.App.ext.ExistingHandler.onCustomAction",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction generateCustomAction with new event handler as string 1`] = `
+Object {
+  "sap.app": Object {
+    "id": "my.test.App",
+  },
+  "sap.ui5": Object {
+    "dependencies": Object {
+      "libs": Object {
+        "sap.fe.templates": Object {},
+      },
+    },
+    "routing": Object {
+      "targets": Object {
+        "TestObjectPage": Object {
+          "name": "sap.fe.templates.ListReport",
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {
+                    "MyCustomAction": Object {
+                      "enabled": true,
+                      "press": "my.test.App.ext.ExistingHandler.onCustomAction",
+                      "text": "My custom action text",
+                      "visible": true,
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 1`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "header": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 2`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "content": Object {
+                "footer": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 3`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "controlConfiguration": Object {
+                "@com.sap.vocabularies.UI.v1.FieldGroup": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 4`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "controlConfiguration": Object {
+                "@com.sap.vocabularies.UI.v1.FieldGroup#FacetCustomAction": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 5`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "controlConfiguration": Object {
+                "@com.sap.vocabularies.UI.v1.LineItem": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`CustomAction getTargetElementReference get reference for different control types 6`] = `
+Object {
+  "sap.ui5": Object {
+    "routing": Object {
+      "targets": Object {
+        "TestPage": Object {
+          "options": Object {
+            "settings": Object {
+              "controlConfiguration": Object {
+                "items/@com.sap.vocabularies.UI.v1.LineItem": Object {
+                  "actions": Object {},
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`;
